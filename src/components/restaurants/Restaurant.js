@@ -22,4 +22,3 @@ class Restaurant extends Component {
 }
 
 export default Restaurant;
-w;
