@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ReviewInput from '../components/reviews/ReviewInput';
+import Reviews from '../components/reviews/Reviews';
+import { addReview } from '../actions/ReviewActions';
+
+class ReviewsContainer extends Component {
+
+  render() {
+    return (
+      <div>
+        <ReviewInput />
+        <Reviews />
+      </div>
+    )
+  }
+}
+const mapState = ({ reviews }) => ({ reviews });
+export default connect(mapState, { addReview })(ReviewsContainer);
